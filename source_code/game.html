@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myGame">
+<head>
+    <title>Flag Finder</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <script src="javascript/flags.js"></script>
+    <script src="javascript/angular.js"></script>
+
+</head>
+<body style="background-color: #DADBDD" ng-controller="GameController" >
+<div>
+    <img src="images/icons/flag.png" alt="Flag" height="100" width="100" style="margin:10px;"/>
+    <h1 style="display:inline-block;">Flag Finder</h1>
+</div>
+<nav class="navbar-inverse" style="background-color: #474e5d; padding: 5px;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="padding: 10px 0px 10px 0px">
+    <h3>How Many Of These Flags Of The World Can You Identify?</h3>
+    <div class="game-flex">
+
+        <div class="flex-item flag-container" >
+            <div>
+                <img ng-src="images/{{flagPicture}}.png"  alt="{{flagName}}" style="width: 400px;">
+            </div>
+        </div>
+
+        <div class=" flex-item quiz-container">
+            <p> {{question}} - Which country's flag is this? </p>
+            <br/>
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{score}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width':score + '%'}" style="height:11%;" >{{score}}</div>
+            <br/> <br/>
+            <button class="btn btn-default button1" ng-click="getButtonValue(flagName1)" id="{{flagName1}}">{{flagName1}} </button>
+            <button class="btn btn-default button2" ng-click="getButtonValue(flagName2)" id="{{flagName2}}">{{flagName2}} </button>
+            <br/>
+            <button class="btn btn-default button3" ng-click="getButtonValue(flagName3)" id="{{flagName3}}">{{flagName3}} </button>
+            <button class="btn btn-default button4" ng-click="getButtonValue(flagName4)" id="{{flagName4}}">{{flagName4}} </button>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button ng-click="nextQuestion()" class="btn btn-info" style="padding-left: 50px; padding-right: 50px;">Next Question</button>
+    </div>
+    <br/><br/>
+
+</div>
+
+<footer style="background-color: #474e5d; padding: 30px; color: #9d9d9d;">
+    <span class="glyphicon glyphicon-copyright-mark"></span> <span id="year"></span> - Flag Finder</p>
+    <script>
+        // copyright - You have to place the span element before the script, so that it exists when the script is loaded.
+        document.getElementById("year").innerHTML = " " + (new Date()).getFullYear();
+    </script>
+</footer>
+</body>
+</html>

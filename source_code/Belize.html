@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belize</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+
+    <style>
+        #map {
+            height: 350px;
+            width: 98.5%;
+            margin: 0px auto 20px auto;
+        }
+    </style>
+
+</head>
+<body style="background-color: #DADBDD">
+<div>
+    <img src="images/icons/flag.png" alt="Flag" height="100" width="100" style="margin:10px;"/>
+    <h1 style="display:inline-block;">Flag Finder</h1>
+</div>
+<nav class="navbar-inverse" style="background-color: #474e5d; padding: 5px;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Flag Finder</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-flex">
+    <h3 style="text-align: center; margin-top: -20px;">Belize - Country in Central America</h3>
+    <div style=" margin: 0 0 10px 10px;">
+        <p style="line-height: 3em;">
+            Belize is a nation on the eastern coast of Central America, with Caribbean Sea shorelines to the east and dense jungle to the west. Offshore, the massive Belize Barrier Reef, dotted with hundreds of low-lying islands called cayes, hosts rich marine life. Belize’s jungle areas are home to Mayan ruins like Caracol, renowned for its towering pyramid; lagoon-side Lamanai; and Altun Ha, just outside Belize City.            <a href="https://en.wikipedia.org/wiki/Belize" style="color: blue;">Wikipedia</a><br/>
+            <b>Capital:</b> Belmopan<br/>
+            <b>Currency:</b> Belize dollar<br/>
+            <b>Population:</b>  387,879 (2016) World Bank
+        </p>
+    </div>
+</div>
+
+<div id="map">
+
+</div>
+
+<script>
+    function initMap() {
+        var uluru = {lat: 17.1899, lng: -88.4976};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKSuK3e2SmHnzI1dOMHJ5FhLU2SyWeWWQ&callback=initMap">
+</script>
+
+<footer style="background-color: #474e5d; padding: 30px; color: #9d9d9d;">
+    <span class="glyphicon glyphicon-copyright-mark"></span> <span id="year"></span> - Flag Finder</p>
+    <script>
+        // copyright - You have to place the span element before the script, so that it exists when the script is loaded.
+        document.getElementById("year").innerHTML = " " + (new Date()).getFullYear();
+    </script>
+</footer>
+</body>
+</html>

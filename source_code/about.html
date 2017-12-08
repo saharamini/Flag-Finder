@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+
+
+</head>
+<body style="background-color: #DADBDD">
+<div>
+    <img src="images/icons/flag.png" alt="Flag" height="100" width="100" style="margin:10px;"/>
+    <h1 style="display:inline-block;">Flag Finder</h1>
+</div>
+<nav class="navbar-inverse" style="background-color: #474e5d; padding: 5px;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="padding: 10px 0px 10px 0px">
+    <p>
+        The goal of this website is to be able to identify country flags quickly. By selecting or deselecting characteristics about the flag,
+        you can whittle the list down and identify the flag you are looking for. The characteristics include colors, shapes, and a
+        few patterns which I've included in the shapes category.
+    </p>
+    <p>This application was created for a final project for CS 701 at Boston University. The code is open source and available on GitHub.</p>
+    <p>
+        <a href="https://github.com/saharamini" target="_blank">
+            <span class="fa fa-github" style="font-size:48px;color:blue"></span>
+            View Code
+        </a>
+    </p>
+
+    <h3>How to use this site</h3>
+    <p>
+        The filter buttons allow for three states, selected, deselected, or neither.
+        If you are not sure if a flag does or does not have a characteristic, leave it as neither.
+    </p>
+
+    <h3>Technologies used</h3>
+    <ul>
+        <li>JavaScript</li>
+        <li>Angular</li>
+        <li>jQuery</li>
+        <li>Bootstrap</li>
+        <li>Google Map API</li>
+    </ul>
+
+</div>
+
+<footer style="background-color: #474e5d; padding: 30px; color: #9d9d9d;">
+    <span class="glyphicon glyphicon-copyright-mark"></span> <span id="year"></span> - Flag Finder</p>
+    <script>
+        // copyright - You have to place the span element before the script, so that it exists when the script is loaded.
+        document.getElementById("year").innerHTML = " " + (new Date()).getFullYear();
+    </script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,257 @@
+﻿body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-family:'Comic Sans MS';
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+}
+
+dl.flag-attr{
+    width: 120px;
+}
+
+.flag-attr > dt {
+    width: 5em;
+}
+
+.flag-attr > dd {
+    margin-left: 5em;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.button-row {
+    padding-bottom: 10px;
+}
+
+/* hr after filter shapes*/
+hr.filter-hr {
+    margin-bottom: 4px;
+    clear: both;
+}
+
+.flag-label {
+    background-color: #646B7C;
+}
+
+/* filter colors tab*/
+.filter-color {
+    color: white;
+    padding: 4px 10px;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+
+/* filter colors tab mouse over or mouse click*/
+.filter-color:hover {
+    color: black;
+}
+.filter-color:focus {
+    color: white;
+}
+
+/* filter shape tab*/
+.filter-shape {
+    color: white;
+    background-color: #A5A8AF;
+    padding: 4px 10px;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+/* filter shape tab mouse over or mouse click*/
+.filter-shape:hover {
+    color: black;
+}
+.filter-shape:focus {
+    color: white;
+}
+
+
+/* when user select the button*/
+.selected-color {
+    opacity: 1;
+}
+
+.selected-shape {
+    opacity: 1;
+    background: green;
+    color: white !important;
+}
+
+/* make pictures and titles big*/
+td:hover {
+    -webkit-transform: scale(1.15); /* Safari and Chrome */
+    -moz-transform: scale(1.15); /* Firefox */
+    -o-transform: scale(1.15); /* Opera */
+    transform: scale(1.15);
+}
+
+/* contact page*/
+.social-list {
+    padding-left: 0px;
+}
+
+.social-list > li {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 3px;
+}
+
+label.check-lbl {
+    width: 60px;
+    background-color: #828793;
+    color: white;
+    display: inline;
+    padding: 2px 6px;
+}
+
+label.label-chkbox {
+    padding: 2px 4px;
+}
+
+    label.label-chkbox:hover{
+        background-color: white;
+    }
+    
+    @media (min-width: 768px) {
+        label .check-lbl {
+        width: 4em;
+        padding: 4px;
+    }
+
+    label.label-chkbox {
+        padding: 4px 6px;
+    }
+}
+
+@media (min-width: 992px) {
+    label.check-lbl {
+        width: 6em;
+        padding: 4px;
+    }
+
+    label.label-chkbox {
+        padding: 4px 6px;
+    }
+}
+
+@media (min-width: 1200px) {
+    label.check-lbl {
+        width: 8em;
+        padding: 6px 12px;
+    }
+
+    label.label-chkbox {
+        padding: 6px 12px;
+    }
+}
+
+#map {
+    border-radius: 8px;
+    border-style: solid;
+    border-width: thin;
+}
+
+/* show number of flags which matched*/
+.count {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+/* myTable */
+#myTable td{
+    padding: 10px;
+}
+
+/* main flex*/
+.main-flex {
+    display: -moz-flex;/* Mozilla */
+    display: -ms-flex; /* IE */
+    display: -webkit-flex; /* Webkit */
+    display: flex;
+    -moz-flex-direction: column;/* Mozilla */
+    -webkit-flex-direction: column; /* Webkit */
+    -ms-flex-direction:column; /* IE */
+    flex-direction: column;
+    width: 100%;
+    padding-top: 40px;
+
+}
+
+/* flex item*/
+.flex-item{
+    -moz-flex: 1; /* Mozilla */
+    -webkit-flex: 1; /* Webkit */
+    -ms-flex: 1; /* IE */
+    flex:1;
+    padding: 5px;
+    margin-left: 10%;
+}
+
+/* game angular page*/
+.quiz-container button{
+    margin: 10px;
+    width: 200px;
+}
+
+.quiz-container {
+    background-color: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+
+}
+
+.flag-container {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+
+/* main flex*/
+.game-flex {
+    display: -moz-flex;/* Mozilla */
+    display: -ms-flex; /* IE */
+    display: -webkit-flex; /* Webkit */
+    display: flex;
+    -moz-flex-direction: row;/* Mozilla */
+    -webkit-flex-direction: row; /* Webkit */
+    -ms-flex-direction:row; /* IE */
+    flex-direction: row;
+    width: 100%;
+    padding-top: 40px;
+
+}

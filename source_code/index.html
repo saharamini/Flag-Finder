@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Home Page</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+
+    <script  type="text/javascript" src="javascript/flags.js"></script>
+    <script  type="text/javascript" src="javascript/main.js"></script>
+
+</head>
+<body style="background-color: #DADBDD">
+<div>
+    <img src="images/icons/flag.png" alt="Flag" height="100" width="100" style="margin:10px;"/>
+    <h1 style="display:inline-block;">Flag Finder</h1>
+</div>
+<nav class="navbar-inverse" style="background-color: #474e5d; padding: 5px;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="main-flex">
+    <!-- Reset button -->
+    <div class="flex-item">
+        <span style="vertical-align: middle;" id="counter" class="count">197</span>
+
+        <button class="btn btn-default" onclick="reset()">Reset</button>
+    </div>
+    <!-- Color menu - -->
+    <div class="flex-item">
+        <h4 style="float: left;">Colors </h4>
+        <div class="col-md-11" style="padding-top: 6px;">
+            <!-- glyphicon glyphicon-minus= - -->
+            <!-- RED -->
+            <button id="red" class="btn filter-color" value="red" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Red</button>
+            <!-- ORANGE -->
+            <button id="orange" class="btn filter-color" value="orange" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Orange</button>
+            <!-- YELLOW -->
+            <button id="yellow" class="btn filter-color" value="yellow" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Yellow</button>
+            <!-- GREEN -->
+            <button id="green" class="btn filter-color" value="green" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Green</button>
+            <!-- BLUE -->
+            <button id="blue" class="btn filter-color" value="blue" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Blue</button>
+            <!-- PURPLE -->
+            <button id="purple" class="btn filter-color" value="purple" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Purple</button>
+            <!-- BROWN -->
+            <button id="brown" class="btn filter-color" value="brown" onclick="clickColor(this)"><span class="glyphicon glyphicon-minus"></span> Brown</button>
+            <!-- WHITE -->
+            <button id="white" class="btn filter-color" value="white" onclick="clickColor(this)" style="color:black;"><span class="glyphicon glyphicon-minus"></span> White</button>
+            <!-- BLACK -->
+            <button id="black" class="btn filter-color" value="black" onclick="clickColor(this)" style="color:white;"><span class="glyphicon glyphicon-minus"></span> Black</button>
+        </div>
+    </div>
+    <!-- Shapes menu -->
+    <div class="flex-item">
+        <h4 style="float: left;">Shapes</h4>
+        <div class="col-md-11" style="padding-top: 6px;">
+            <!-- CIRCLE -->
+            <button id="circle" class="btn filter-shape" value="circle" onclick="clickShape(this)" title="Flag has an obvious defined circle.">
+                <span class="glyphicon glyphicon-minus"></span> Circle
+            </button>
+            <!-- TRIANGLE -->
+            <button id="triangle" class="btn filter-shape" value="triangle" onclick="clickShape(this)" title="A triangle appears anywhere on the flag. Some of the triangles are not obvious.">
+                <span class="glyphicon glyphicon-minus"></span> Triangle
+            </button>
+            <!-- STAR -->
+            <button id="star" class="btn filter-shape" value="star" onclick="clickShape(this)" title="Stars are not limited to the five point star common on many flags.">
+                <span class="glyphicon glyphicon-minus"></span> Star
+            </button>
+            <!-- SUN -->
+            <button id="sun" class="btn filter-shape" value="sun" onclick="clickShape(this)">
+                <span class="glyphicon glyphicon-minus"></span> Sun
+            </button>
+            <!-- MOON -->
+            <button id="moon" class="btn filter-shape" value="moon" onclick="clickShape(this)" title="Flag has a crescent moon.">
+                <span class="glyphicon glyphicon-minus"></span> Moon
+            </button>
+            <!-- CROSS -->
+            <button id="cross" class="btn filter-shape" value="cross" onclick="clickShape(this)" title="Flag has a horizonal line and a vertical line that overlap each other.">
+                <span class="glyphicon glyphicon-minus"></span> Cross
+            </button>
+            <!-- Tri Color Horizontal -->
+            <button id="tri-color-horz" class="btn filter-shape" value="tri-color-horz" onclick="clickShape(this)" title="Flag has 3 broad horizontal stripes with no colors in between.">
+                <span class="glyphicon glyphicon-minus"></span> <img src="images/TriColorHorizontal.png" />
+            </button>
+            <!-- Tri Color Vertical -->
+            <button id="tri-color-vert" class="btn filter-shape" value="tri-color-vert" onclick="clickShape(this)" title="Flag has 3 broad vertical stripes with no colors in between.">
+                <span class="glyphicon glyphicon-minus"></span> <img src="images/TriColorVertical.png" />
+            </button>
+            <!-- Bi Color Horizontal -->
+            <button id="bi-color-horz" class="btn filter-shape" value="bi-color-horz" onclick="clickShape(this)" title="Flag has 2 broad horizontal stripes with no colors in between.">
+                <span class="glyphicon glyphicon-minus"></span> <img src="images/BiColorHorizontal.png" />
+            </button>
+        </div>
+    </div>
+    <hr class="filter-hr" />
+    <!-- content -->
+    <div class="flex-item">
+        <div class="text-center">
+            <table>
+                <table id="myTable">
+
+                </table>
+                <script>
+                    // window.onload = function ... or
+                    window.onload = showTable();
+                </script>
+            </table>
+        </div>
+    </div>
+</div>
+<footer style="background-color: #474e5d; padding: 30px; color: #9d9d9d;">
+    <span class="glyphicon glyphicon-copyright-mark"></span> <span id="year"></span> - Flag Finder</p>
+    <script>
+        // copyright - You have to place the span element before the script, so that it exists when the script is loaded.
+        document.getElementById("year").innerHTML = " " + (new Date()).getFullYear();
+    </script>
+</footer>
+</body>
+</html>

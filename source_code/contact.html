@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+
+</head>
+<body style="background-color: #DADBDD">
+<div>
+    <img src="images/icons/flag.png" alt="Flag" height="100" width="100" style="margin:10px;"/>
+    <h1 style="display:inline-block;">Flag Finder</h1>
+</div>
+<nav class="navbar-inverse" style="background-color: #474e5d; padding: 5px;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="padding: 10px 0px 10px 0px">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Contact</h3>
+            <address>
+                Sahar Amini<br />
+                <a href="mailto:samini@bu.edu">samini@bu.edu</a>
+            </address>
+            <h3>Course</h3>
+            Boston University<br />
+            MET CS 701 Rich Internet Application Development<br />
+            <br />
+            <a href="http://www.bu.edu/met/" target="_blank">
+                <img src="images/Icons/bulogo.png" />
+            </a>
+        </div>
+        <div class="col-sm-6">
+            <h3>Find me online</h3>
+            <ul class="social-list">
+                <li>
+                    <a href="https://github.com/saharamini" target="_blank">
+                        <span class="fa fa-github" style="font-size:48px;color:blue"></span>
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/saharamini/" target="_blank">
+                        <span class="fa fa-linkedin-square" style="font-size:48px;color:blue"></span>
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/sahary67" target="_blank">
+                        <span class="fa fa-twitter-square" style="font-size:48px;color:blue"></span>
+                        Twitter
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer style="background-color: #474e5d; padding: 30px; color: #9d9d9d;">
+    <span class="glyphicon glyphicon-copyright-mark"></span> <span id="year"></span> - Flag Finder</p>
+    <script>
+        // copyright - You have to place the span element before the script, so that it exists when the script is loaded.
+        document.getElementById("year").innerHTML = " " + (new Date()).getFullYear();
+    </script>
+</footer>
+</body>
+</html>
